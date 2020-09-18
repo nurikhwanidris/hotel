@@ -82,7 +82,8 @@ class Hotel extends BaseController
             'meals' => $this->request->getVar('meals'),
             'validity' => $this->request->getVar('validity'),
             'location' => $this->request->getVar('location'),
-            'cover' => $fileName
+            'cover' => $fileName,
+            'created_at' => date("Y-m-d H:i:s"),
         ]);
 
         session()->setFlashdata('alert', 'Hotel inserted.');
@@ -131,6 +132,7 @@ class Hotel extends BaseController
             'meals' => $this->request->getVar('meals'),
             'validity' => $this->request->getVar('validity'),
             'location' => $this->request->getVar('location'),
+            'updated_at' => date("Y-m-d H:i:s")
         ]);
 
         session()->setFlashdata('alert', 'Hotel information edited.');

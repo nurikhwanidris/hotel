@@ -14,7 +14,9 @@ class HotelModel extends Model
         'meals',
         'validity',
         'location',
-        'cover'
+        'cover',
+        'created_at',
+        'updated_at'
     ];
 
     public function getHotel($id = false)
